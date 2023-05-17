@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
+
+:root{
+    --color-principal:#aa50d4;
+    --color-secundario:#2c68a3;
+}
+
+*,
+::before,
+::after {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+
+     /* fallback for old browsers */
+    background: rgb(170,80,212);
+
+    background: -webkit-linear-gradient(0deg, rgba(170,80,212,1) 0%, rgba(44,104,163,1) 100%);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to left, #aa50d4, #2c68a3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 657px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto';
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 0px;
+    font-family: 'Merriweather Sans';
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--color-secundario);
+}
+
+form {
+    width: 25%;
+    background: #fff;
+    padding: 35px 25px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 35px 5px;
+
+}
+
+input {
+    width: 100%;
+    background: none;
+    font-size: 15px;
+    padding: 10px 0px 5px 0px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--color-principal);
+    font-weight: 100;
+    font-size: 18px;
+    color: #286393;
+}
+
+input:focus {
+    outline: none;
+    color: #3d635e;
+}
+
+label {
+    color: #c0c0c0;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 13px;
+    color:var(--color-secundario);
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to bottom, #ffd166, #06d6a0);
+    transition: 0.3s ease width;
+    left: 0px;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    background: var(--color-principal);
+    transition: 0.3s ease all ;
+    background-size: 1px 100px;
+    font-family: 'Roboto';
+    border: none;
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    height: 32px;
+    font-size: 15px;
+    color: #fff;
+    outline: 0;
+    margin-bottom: 15px;
+}
+
+
+button:hover{
+    cursor: pointer;
+    width: 85%;
+}
+
+.finalrTextForm  {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color:var(--color-principal);
+    margin:5px 10px;
+}
+
+a:hover  {
+    text-decoration: underline;
+}

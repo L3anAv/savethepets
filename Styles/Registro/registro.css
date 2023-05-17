@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap');
+
+:root{
+    --color-principal:#aa50d4;
+    --color-secundario:#2c68a3;
+}
+
+
+*,
+::before,
+::after {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    height: 100vh;
+    background: rgb(170,80,212);
+    background: linear-gradient(0deg, rgba(170,80,212,1) 0%, rgba(44,104,163,1) 100%); 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto';
+}
+
+h1 {
+    font-family: 'Merriweather Sans';
+    text-align: left;
+    margin-top:10px;
+    font-size: 25px;
+    color: var(--color-principal);
+}
+
+form {
+    background: #fff;
+    padding: 15px 35px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 35px 5px;
+
+}
+
+input {
+    width: 100%;
+    background: none;
+    padding: 10px 0px 5px 0px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--color-principal);
+    font-weight: 100;
+    font-size: 18px;
+    color: #000000;
+}
+
+input:focus {
+    outline: none;
+    color: #000000;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #c0c0c0;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    left: 2px;
+    top: 15px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -11px;
+    font-size: 11px;
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0px;
+    bottom: 0; 
+    position: absolute;
+    background: linear-gradient(to bottom, #06d6a0, #ffd166 );
+    transition: 0.3s ease width;
+    left: 0px;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    background: var(--color-principal);
+    transition: 0.3s ease all ;
+    background-size: 1px 100px;
+    font-family: 'Roboto';
+    border: none;
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    height: 32px;
+    font-size: 15px;
+    color: #fff;
+    outline: 0;
+    margin-bottom: 15px;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+.finalrTextForm  {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color:#1e5acc;
+    margin:5px 10px;
+}
+
+/* Clases para verifición con javascript*/
+
+.siVerificated {
+    border-bottom: 1px solid #40940b;
+
+}
+
+.noVerificated {
+    border-bottom: 1px solid #f44254;
+}
+
+/* Estilos de warnings*/
+
+.warning {
+    font-size: 10px;
+    color: #f44254;
+    display: flex;
+    justify-content: start;
+    margin-top: 3px;
+}
+
+.warningIncomplete {
+    font-size: 15px;
+    color: #f44254;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+/* Flecha de back */
+.backPadre {
+    margin-top: 2%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background: var(--color-principal);
+    width:16%;
+    border-radius: 100px;
+
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    color:#fff;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
